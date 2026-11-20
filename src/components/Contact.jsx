@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Reveal from "./Reveal"
 
 function Contact() {
   const [name, setName] = useState("")
@@ -18,60 +19,67 @@ Phone Number: ${phone}
 Message:
 ${message}`
 
-    window.open(`https://wa.me/94776501169?text=${encodeURIComponent(whatsappMessage)}`, "_blank")
+    window.open(`https://wa.me/94767408454?text=${encodeURIComponent(whatsappMessage)}`, "_blank")
   }
 
   return (
-    <section id="contact" className="section-pad bg-slate-50">
-      <div className="mx-auto max-w-7xl px-5 sm:px-6">
-        <div className="max-w-3xl">
+    <section id="contact" className="section-pad relative overflow-hidden bg-sand/60">
+      <div className="gold-hairline absolute inset-x-0 top-0" />
+      <div className="glow-orb -left-32 bottom-10 hidden h-[26rem] w-[26rem] lg:block" />
+
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
+        <Reveal className="max-w-3xl">
           <div className="section-kicker">Contact Us</div>
-          <h2 className="section-title mt-3">Let's talk about your requirements.</h2>
-          <p className="mt-5 text-lg leading-8 text-slate-600">Questions, quotations, bulk orders or product inquiries — send us a message and we'll continue the conversation on WhatsApp.</p>
-        </div>
+          <h2 className="section-title mt-5">Let's talk about your <em>requirements.</em></h2>
+          <p className="mt-6 text-lg leading-8 text-slate-600">Questions, quotations, bulk orders or product inquiries — send us a message and we'll continue the conversation on WhatsApp.</p>
+        </Reveal>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-[.8fr_1.2fr]">
-          <div className="rounded-[2rem] bg-slate-950 p-7 text-white sm:p-9">
-            <div className="text-sm font-bold uppercase tracking-[0.2em] text-blue-400">Direct contact</div>
-            <h3 className="mt-3 text-2xl font-black">Reach Lead Bag</h3>
-            <p className="mt-4 leading-7 text-slate-400">Contact us directly for product information, bulk orders, quotations and business inquiries.</p>
+        <div className="mt-14 grid gap-7 lg:grid-cols-[.8fr_1.2fr]">
+          <Reveal variant="reveal-left" className="relative overflow-hidden rounded-[2rem] border border-gold/30 bg-gradient-to-br from-navy via-navy-deep to-navy-ink p-7 text-white shadow-[0_40px_70px_-35px_rgba(14,27,51,0.8)] sm:p-10">
+            <div className="glow-orb -right-20 -top-20 h-64 w-64" />
+            <div className="relative">
+              <div className="text-xs font-extrabold uppercase tracking-[0.24em] text-gold-light">Direct contact</div>
+              <h3 className="mt-3 font-display text-4xl font-semibold">Reach Lead Bag</h3>
+              <p className="mt-4 leading-7 text-slate-300">Contact us directly for product information, bulk orders, quotations and business inquiries.</p>
 
-            <div className="mt-9 space-y-5">
-              {[
-                ["📍", "Address", "Company Address Here, Sri Lanka"],
-                ["📞", "Phone", "+94 77 650 1169"],
-                ["💬", "WhatsApp", "Chat with us on WhatsApp"],
-                ["✉", "Email", "info@leadbag.lk"],
-              ].map(([icon, label, value]) => (
-                <div key={label} className="flex gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-lg">{icon}</div>
-                  <div>
-                    <div className="text-sm font-bold">{label}</div>
-                    {label === "Phone" ? (
-                      <a href="tel:+94776501169" className="mt-1 block text-sm text-slate-400 hover:text-white">{value}</a>
-                    ) : label === "WhatsApp" ? (
-                      <a href="https://wa.me/94776501169" target="_blank" rel="noreferrer" className="mt-1 block text-sm text-slate-400 hover:text-white">{value}</a>
-                    ) : label === "Email" ? (
-                      <a href="mailto:info@leadbag.lk" className="mt-1 block text-sm text-slate-400 hover:text-white">{value}</a>
-                    ) : (
-                      <div className="mt-1 text-sm text-slate-400">{value}</div>
-                    )}
+              <div className="mt-9 space-y-5">
+                {[
+                  ["📍", "Address", "Company Address Here, Sri Lanka"],
+                  ["📞", "Phone", "+94 76 740 8454"],
+                  ["💬", "WhatsApp", "Chat with us on WhatsApp"],
+                  ["✉", "Email", "info@leadbag.lk"],
+                ].map(([icon, label, value]) => (
+                  <div key={label} className="group flex gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-gold/30 bg-white/5 text-lg transition duration-300 group-hover:border-gold group-hover:bg-gold/15">{icon}</div>
+                    <div>
+                      <div className="text-sm font-bold text-gold-light">{label}</div>
+                      {label === "Phone" ? (
+                        <a href="tel:+94767408454" className="mt-1 block text-sm text-slate-300 transition hover:text-white">{value}</a>
+                      ) : label === "WhatsApp" ? (
+                        <a href="https://wa.me/94767408454" target="_blank" rel="noreferrer" className="mt-1 block text-sm text-slate-300 transition hover:text-white">{value}</a>
+                      ) : label === "Email" ? (
+                        <a href="mailto:info@leadbag.lk" className="mt-1 block text-sm text-slate-300 transition hover:text-white">{value}</a>
+                      ) : (
+                        <div className="mt-1 text-sm text-slate-300">{value}</div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
 
-            <div className="mt-9 rounded-2xl border border-white/10 bg-white/[0.04] p-5">
-              <div className="text-sm font-bold text-white">Business inquiries</div>
-              <p className="mt-2 text-sm leading-6 text-slate-400">For faster assistance, include the product name, required quantity and preferred colours.</p>
+              <div className="mt-9 rounded-2xl border border-gold/25 bg-white/[0.04] p-5">
+                <div className="text-sm font-bold text-white">Business inquiries</div>
+                <p className="mt-2 text-sm leading-6 text-slate-300">For faster assistance, include the product name, required quantity and preferred colours.</p>
+              </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-xl shadow-slate-900/5 sm:p-9">
-            <h3 className="text-2xl font-black text-slate-950">Send an inquiry</h3>
+          <Reveal variant="reveal-right" delay={120} className="rounded-[2rem] border border-gold/25 bg-white p-7 shadow-[0_40px_70px_-40px_rgba(14,27,51,0.45)] sm:p-10">
+            <h3 className="font-display text-4xl font-semibold text-navy">Send an inquiry</h3>
             <p className="mt-2 text-sm text-slate-500">Your message will open directly in WhatsApp.</p>
+            <div className="mt-5 h-px w-16 bg-gradient-to-r from-gold to-transparent" />
 
-            <form onSubmit={handleSubmit} className="mt-8 grid gap-5 sm:grid-cols-2">
+            <form onSubmit={handleSubmit} className="contact-form mt-8 grid gap-5 sm:grid-cols-2">
               <div>
                 <label htmlFor="name" className="form-label">Name</label>
                 <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required placeholder="Your name" className="form-input" />
@@ -88,11 +96,11 @@ ${message}`
                 <label htmlFor="message" className="form-label">Message</label>
                 <textarea id="message" rows="6" value={message} onChange={(e) => setMessage(e.target.value)} required placeholder="Tell us what you need..." className="form-input resize-none" />
               </div>
-              <button type="submit" className="sm:col-span-2 rounded-xl bg-emerald-500 px-6 py-4 text-sm font-black text-white shadow-lg shadow-emerald-900/10 transition hover:-translate-y-0.5 hover:bg-emerald-600">
-                Open WhatsApp Inquiry →
+              <button type="submit" className="btn-gold sm:col-span-2 px-6 py-4 text-sm">
+                Open WhatsApp Inquiry <span className="btn-arrow">→</span>
               </button>
             </form>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

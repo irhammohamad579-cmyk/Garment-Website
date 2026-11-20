@@ -1,18 +1,27 @@
+import Reveal from "./Reveal"
+
 function CTA() {
   return (
-    <section className="bg-slate-950 px-5 py-6 sm:px-6">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-700 to-blue-950 px-7 py-12 shadow-2xl sm:px-12 lg:px-16 lg:py-14">
-        <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-200">Let's work together</p>
-            <h2 className="mt-3 max-w-2xl text-3xl font-black tracking-tight text-white sm:text-4xl">Need bags for your shop or business?</h2>
-            <p className="mt-4 max-w-2xl leading-7 text-blue-100">Tell us what you need and we'll help you discuss designs, colours, quantities and supply options.</p>
+    <section className="bg-navy-deep px-5 py-10 sm:px-6">
+      <Reveal variant="reveal-scale" className="mx-auto max-w-7xl">
+        <div className="relative overflow-hidden rounded-[2rem] border border-gold/40 bg-gradient-to-br from-navy via-navy-deep to-navy-ink px-7 py-14 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.7)] sm:px-12 lg:px-16 lg:py-16">
+          <div className="glow-orb -right-16 -top-24 h-80 w-80" />
+          <div className="glow-orb -bottom-32 left-1/4 h-72 w-72 opacity-60" />
+          <div className="grain absolute inset-0 opacity-70" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-light to-transparent" />
+
+          <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p className="section-kicker !text-gold-light">Let's work together</p>
+              <h2 className="mt-4 max-w-2xl font-display text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl">Need bags for your <em className="font-medium text-gold-light">shop or business?</em></h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">Tell us what you need and we'll help you discuss designs, colours, quantities and supply options.</p>
+            </div>
+            <a href="#contact" className="btn-gold btn-cta-pulse px-8 py-4 text-sm">
+              Start an Inquiry <span className="btn-arrow">→</span>
+            </a>
           </div>
-          <a href="#contact" className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-4 text-sm font-black text-blue-700 shadow-xl transition hover:-translate-y-1 hover:bg-blue-50">
-            Start an Inquiry →
-          </a>
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }

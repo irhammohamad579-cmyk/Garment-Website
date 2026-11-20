@@ -8,6 +8,7 @@ import Celebrations from "./components/Celebrations"
 import CTA from "./components/CTA"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import Catalog from "./components/Catalog"
 import AdminLogin from "./admin/AdminLogin"
 import AdminDashboard from "./admin/AdminDashboard"
 import ProductManagement from "./admin/ProductManagement"
@@ -35,7 +36,7 @@ function PublicWebsite() {
         target="_blank"
         rel="noreferrer"
         aria-label="Chat with Lead Bag on WhatsApp"
-        className="fixed bottom-5 right-5 z-40 flex items-center gap-3 rounded-full bg-emerald-500 px-5 py-3.5 text-sm font-bold text-white shadow-xl shadow-emerald-900/20 transition duration-300 hover:-translate-y-1 hover:bg-emerald-600 sm:bottom-7 sm:right-7"
+        className="wa-float fixed bottom-5 right-5 z-40 flex items-center gap-3 rounded-full border border-white/20 bg-emerald-500 px-5 py-3.5 text-sm font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-emerald-600 sm:bottom-7 sm:right-7"
       >
         <span className="text-lg">◉</span>
         <span className="hidden sm:inline">Chat on WhatsApp</span>
@@ -50,6 +51,7 @@ function App() {
       <Routes>
         <Route path="/" element={<PublicWebsite />} />
         <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/catalog" element={<Catalog />} />
 
         <Route element={<AdminGuard />}>
           <Route path="/admin/dashboard" element={<AdminDashboard />} />

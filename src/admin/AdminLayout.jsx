@@ -14,7 +14,13 @@ function AdminLayout({ title, subtitle, children }) {
       <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 shadow-sm backdrop-blur-xl">
         <div className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-4 px-5 sm:px-6">
           <button type="button" onClick={() => navigate("/admin/dashboard")} className="flex items-center gap-3 text-left">
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-950 text-sm font-black text-white shadow-lg">LB</span>
+            <div className="flex h-[50px] w-[50px] shrink-0 items-center justify-center transition duration-300 group-hover:-rotate-3 sm:h-[50px] sm:w-[50px] lg:h-[50px] lg:w-[50px]">
+              <img
+                src="/images/logo_G2.png"
+                alt="LEAD logo"
+                className="h-full w-full object-contain"
+              />
+              </div>
             <span>
               <span className="block text-sm font-black text-slate-950">Lead Bag Admin</span>
               <span className="block text-[10px] font-bold uppercase tracking-[.18em] text-slate-500">{subtitle}</span>
