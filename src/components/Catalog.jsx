@@ -9,7 +9,7 @@ function Catalog() {
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
-  const whatsappNumber = "94776501169"
+  const whatsappNumber = "94767408454"
 
   useEffect(() => {
     const fetchProducts = async () => {
