@@ -37,7 +37,7 @@ function Footer() {
             <h3 className="text-xs font-extrabold uppercase tracking-[0.24em] text-gold-light">Get in touch</h3>
             <div className="mt-5 space-y-3 text-sm text-slate-400">
               <a className="block w-fit transition duration-300 hover:translate-x-1 hover:text-gold-light" href="tel:+94767408454">+94 76 740 8454</a>
-              <a className="block w-fit transition duration-300 hover:translate-x-1 hover:text-gold-light" href="mailto:info@leadbag.lk">info@leadbag.lk</a>
+              <a className="block w-fit transition duration-300 hover:translate-x-1 hover:text-gold-light" href="leadbagpvtltd@gmail.com">leadbagpvtltd@gmail.com</a>
               <a className="block w-fit transition duration-300 hover:translate-x-1 hover:text-gold-light" href="https://wa.me/94767408454" target="_blank" rel="noreferrer">WhatsApp</a>
             </div>
           </div>

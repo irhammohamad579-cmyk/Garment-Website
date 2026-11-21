@@ -44,10 +44,10 @@ ${message}`
 
               <div className="mt-9 space-y-5">
                 {[
-                  ["📍", "Address", "Company Address Here, Sri Lanka"],
+                  ["📍", "Address", "No. 09, P.R. De Silva Mawatha, Balapitiya, Sri Lanka"],
                   ["📞", "Phone", "+94 76 740 8454"],
                   ["💬", "WhatsApp", "Chat with us on WhatsApp"],
-                  ["✉", "Email", "info@leadbag.lk"],
+                  ["✉", "Email", "leadbagpvtltd@gmail.com"],
                 ].map(([icon, label, value]) => (
                   <div key={label} className="group flex gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-gold/30 bg-white/5 text-lg transition duration-300 group-hover:border-gold group-hover:bg-gold/15">{icon}</div>

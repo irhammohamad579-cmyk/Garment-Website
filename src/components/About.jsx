@@ -5,7 +5,7 @@ function About() {
   // Hero, so only the two figures that appear nowhere else are highlighted here.
   const stats = [
     ["10+", "Years Experience"],
-    ["500+", "Product Designs"],
+    ["300+", "Product Designs"],
     ["100+", "Customers"],
     ["100%", "Care & Commitment"],
   ].slice(2)
